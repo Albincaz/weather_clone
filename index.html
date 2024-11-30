@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link href="https://fonts.googleapis.com/css?family=Archivo+Black&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <p class="logo-1">Welcome To Weather Forecast</p>
+        <section class="container">
+            <div class="row">
+              <form class="col" id="search-form">
+                <input
+                  type="text"
+                  id="search-input"
+                  aria-describedby="searchCity"
+                  placeholder="Search city..."
+                  class="search-form"
+                  autocomplete="off"
+                />
+                <button type="submit">Search</button>
+              </form>
+              <h1
+                class="col d-flex justify-content-center align-items-center city-title"
+                id="searched-city"
+              >
+                Bristol
+              </h1>
+            </div>
+            <span class="measurements">
+              <a href="#" id="celcius-link">C°</a> |
+              <a href="#" id="fahrenheit-link">F°</a>
+            </span>
+          </section>
+
+</body>
+</html>
