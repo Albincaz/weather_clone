@@ -6,41 +6,40 @@
     <title>Weather Forecast</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/index.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <h1 id="main-heading">Weather Forecast</h1>
-        <section id="search-form">
-            <input type="text" id="search-input" placeholder="Search city...">
-            <button type="submit">Search</button>
-            <h1 class="city-title" id="searched-city">
-                Thrissur
-              </h1>
-              <span class="measurements">
-                <a href="#" id="celcius-link">C°</a> |
-                <a href="#" id="fahrenheit-link">F°</a>
-              </span>
-        </section>
-
-        <section id="weather-form">
-            <div class="container">
-                <div class="row">
-                  <h1 class="col temp-title" id="current-temperature">4°</h1>
-                  <div class="col todays-info">
-                    <p id="current-time">11:00</p>
-                    <h2 id="current-day">Today</h2>
-                    <p id="weather-type">Cloudy</p>
-                  </div>
-                  <div class="col d-flex align-items-center side-info">
-                    <ul>
-                      <li>Humidity: <span id="humidity"></span></li>
-                      <li>Wind: <span id="wind"></span></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <hr  />
-        </section>
+    <div class="main d-flex justify-content-center align-items-center">
+      <div class="w-50 m-auto p-5 border rounded-5 bg-img shadow-lg">
+        <div class="d-flex justify-content-between align-items-center">
+          <div>
+            <h1 class="text-light">Weather Forecast</h1>
+          </div>
+          <div class="d-flex gap-2 justify-content-end">
+            <input type="text" class="rounded-pill py-2 px-3 border-light text-light" id="search-input" placeholder="search locality">
+          <button class="border-0" onclick="checkWeather()"><i class="fa-solid fa-magnifying-glass fs-3 text-light"></i></button>
+          </div>
+        </div>
+        <div class=" mt-5 p-5 d-flex justify-content-between align-items-center border rounded-5 bg-blur">
+          <div class="text-light">
+            <div id="current-city" class="fs-1 fw-bolder">NewYork</div>
+            <div id="current-time" class="fs-4"></div>
+            <div id="current-day" class="fs-4"></div>
+          </div>
+          <div class="d-flex flex-column align-items-center justify-content-center">
+            <div><img src="./images/clouds.png" id="weatherIcon" alt=""></div>
+            <div class="d-flex justify-content-evenly gap-5">
+              <div id="current-temperature-c" class="text-light fs-4"></div>
+              <div id="current-temperature-f" class="text-light fs-4"></div>
+            </div>
+          </div>
+        </div>
+        <div class="pt-3">
+          <div class="text-light fs-5"><span>Humidity :<div id="humidity"></div></span></div>
+          <div class="text-light fs-5"><span>Wind :<div id="wind"></div></span></div>
+        </div>
+      </div>
     </div>
+    <script src="./script/index.js"></script>
 </body>
 </html>

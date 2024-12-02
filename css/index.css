@@ -2,8 +2,18 @@
         margin: 0%;
         padding: 0%;
     }
-
-    .container{
+    .main{
+        height: 100vh;
+    }
+    .bg-img{
+        background-image: url('../images/w-bg-img.jpg');
+        background-position: center;
+        background-size: cover;
+    }
+    button, input{
+        background: none;
+    }
+    /* .container{
         max-width: 80%;
         margin: 0 auto;
         background-color: #84b5a6;
@@ -92,4 +102,4 @@
         max-width: 800px;
         margin: 48px;
         border: 1px solid #686d80;
-}
+} */
